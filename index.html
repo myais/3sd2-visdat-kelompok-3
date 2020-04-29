@@ -9,7 +9,7 @@
     <script type="text/javascript">
         function initViz() {
             var containerDiv = document.getElementById("vizContainer"),
-                url = "https://public.tableau.com/views/Book2_15878078755910/Sheet1?:display_count=y&publish=yes&:origin=viz_share_link",
+                url = "https://public.tableau.com/views/project_15881133598730/Dashboard1?:display_count=y&:origin=viz_share_link",
                 options = {
                     hideTabs: true,
                     onFirstInteractive: function () {
@@ -32,7 +32,24 @@
           <div class="judul-kecil">3 SD 2</div>
         </div>
       </div>
-      <div class="tiga"></div>
+      <div class="tiga">
+        <div id="overlay" onclick="off()">
+          <div id="text">
+            <ul>
+              <li>Ahmad Afif Adrinanta</li>
+              <li>Fadheel Wisnu Utomo</li>
+              <li>Firnanda Zuhad</li>
+              <li>M. Yais</li>
+              <li>Sumber data: bps.go.id</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="tombol">
+          <button class="btn info" onclick="on()">Info</button>
+        </div>
+        
+      </div>
     </div>
     <div class="content"  id="vizContainer">
     
@@ -41,5 +58,15 @@
       <p>Copyright Kelompok 3 3SD2 2020</p>
     </div>
   </div>
+  
+<script>
+  function on() {
+    document.getElementById("overlay").style.display = "block";
+  }
+  
+  function off() {
+    document.getElementById("overlay").style.display = "none";
+  }
+  </script>
 </body>
 </html>
