@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="master.css">
+  <title>Document</title>
+  <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    <script type="text/javascript">
+        function initViz() {
+            var containerDiv = document.getElementById("vizContainer"),
+                url = "https://public.tableau.com/views/Book2_15878078755910/Sheet1?:display_count=y&publish=yes&:origin=viz_share_link",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        console.log("Run this code when the viz has finished loading.");
+                    }
+                };
+            
+            // Create a viz object and embed it in the container div.
+            var viz = new tableau.Viz(containerDiv, url, options); 
+        }
+    </script>
+</head>
+<body onload="initViz();">
+  <div class="container">
+    <div class="header">
+      <div class="satu"><img src="img/logo.png" alt="PS STIS" width="60px" ></div>
+      <div class="dua">
+        <div class="judul">
+          <div>Kelompok 3</div>
+          <div class="judul-kecil">3 SD 2</div>
+        </div>
+      </div>
+      <div class="tiga"></div>
+    </div>
+    <div class="content"  id="vizContainer">
+    
+    </div>
+    <div class="footer">
+      <p>Copyright Kelompok 3 3SD2 2020</p>
+    </div>
+  </div>
+</body>
+</html>
